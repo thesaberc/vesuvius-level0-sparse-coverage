@@ -1,0 +1,572 @@
+{
+  "source_revision": "3fbb3bbadb84fba3648a0c5c7cdbf7d767f9a3c0",
+  "current_static_revision": "c86cbd14bb34e0124684d3d97b03b310c947819a",
+  "synthetic": {
+    "m1_baseline_mismatches": 163840,
+    "m1_restored_exact": true,
+    "m2_serialized": {
+      "original_mismatches": 0,
+      "translated_mismatches": 0,
+      "planned_level0_chunks": 9
+    }
+  },
+  "w035_targeted": {
+    "volume": "PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr",
+    "level": 0,
+    "cases": [
+      {
+        "proposal_yx": [
+          0,
+          0
+        ],
+        "realized_yx": [
+          0,
+          0
+        ],
+        "read_box_zyx": [
+          3600,
+          2343,
+          3262,
+          3632,
+          2471,
+          3390
+        ],
+        "would_read_keys": [
+          "28/18/25",
+          "28/18/26",
+          "28/19/25",
+          "28/19/26"
+        ],
+        "plans": {
+          "baseline": [
+            "28/18/25",
+            "28/18/26",
+            "28/19/25",
+            "28/19/26"
+          ],
+          "candidate": [
+            "28/17/25",
+            "28/17/26",
+            "28/18/25",
+            "28/18/26",
+            "28/19/25",
+            "28/19/26"
+          ]
+        },
+        "baseline_omissions": [],
+        "comparison": {
+          "baseline": {
+            "omitted_keys": [],
+            "mismatches": 0,
+            "mismatches_by_key": {},
+            "exact_image": true,
+            "planned_chunks": 4,
+            "planned_logical_bytes": 8388608,
+            "planned_stored_bytes": 8388608
+          },
+          "candidate": {
+            "omitted_keys": [],
+            "mismatches": 0,
+            "mismatches_by_key": {},
+            "exact_image": true,
+            "planned_chunks": 6,
+            "planned_logical_bytes": 12582912,
+            "planned_stored_bytes": 12582912
+          },
+          "added_keys": [
+            "28/17/25",
+            "28/17/26"
+          ],
+          "added_logical_bytes": 4194304,
+          "added_stored_bytes": 4194304,
+          "required_chunks": 4,
+          "required_logical_bytes": 8388608,
+          "padding_voxels": 0,
+          "ct_bytes_charged": 14155776,
+          "tensor_equal": {
+            "baseline": {
+              "image": true,
+              "inklabels": true,
+              "supervision_mask": true
+            },
+            "candidate": {
+              "image": true,
+              "inklabels": true,
+              "supervision_mask": true
+            }
+          }
+        }
+      },
+      {
+        "proposal_yx": [
+          -40,
+          0
+        ],
+        "realized_yx": [
+          -40,
+          0
+        ],
+        "read_box_zyx": [
+          3600,
+          2303,
+          3262,
+          3632,
+          2431,
+          3390
+        ],
+        "would_read_keys": [
+          "28/17/25",
+          "28/17/26",
+          "28/18/25",
+          "28/18/26"
+        ],
+        "plans": {
+          "baseline": [
+            "28/18/25",
+            "28/18/26",
+            "28/19/25",
+            "28/19/26"
+          ],
+          "candidate": [
+            "28/17/25",
+            "28/17/26",
+            "28/18/25",
+            "28/18/26",
+            "28/19/25",
+            "28/19/26"
+          ]
+        },
+        "baseline_omissions": [
+          "28/17/25",
+          "28/17/26"
+        ],
+        "comparison": {
+          "baseline": {
+            "omitted_keys": [
+              "28/17/25",
+              "28/17/26"
+            ],
+            "mismatches": 4096,
+            "mismatches_by_key": {
+              "28/17/25": 2112,
+              "28/17/26": 1984
+            },
+            "exact_image": false,
+            "planned_chunks": 4,
+            "planned_logical_bytes": 8388608,
+            "planned_stored_bytes": 8388608
+          },
+          "candidate": {
+            "omitted_keys": [],
+            "mismatches": 0,
+            "mismatches_by_key": {},
+            "exact_image": true,
+            "planned_chunks": 6,
+            "planned_logical_bytes": 12582912,
+            "planned_stored_bytes": 12582912
+          },
+          "added_keys": [
+            "28/17/25",
+            "28/17/26"
+          ],
+          "added_logical_bytes": 4194304,
+          "added_stored_bytes": 4194304,
+          "required_chunks": 4,
+          "required_logical_bytes": 8388608,
+          "padding_voxels": 0,
+          "ct_bytes_charged": 17297408,
+          "tensor_equal": {
+            "baseline": {
+              "image": false,
+              "inklabels": true,
+              "supervision_mask": true
+            },
+            "candidate": {
+              "image": true,
+              "inklabels": true,
+              "supervision_mask": true
+            }
+          }
+        }
+      }
+    ],
+    "deduplicated_keys": [
+      "28/17/25",
+      "28/17/26",
+      "28/18/25",
+      "28/18/26",
+      "28/19/25",
+      "28/19/26"
+    ],
+    "auxiliary_bytes_per_stage": 950174,
+    "ct_body_bytes": 12582912,
+    "ct_charged_read_bytes": 18866176,
+    "cleanup_passed": true
+  },
+  "w035_cohort": {
+    "status": "NO_ACCEPTED_NONZERO",
+    "counts": {
+      "accepted_controls": 3,
+      "accepted_nonzero": 0,
+      "fallbacks": 6,
+      "rejections": 0,
+      "accepted_nonzero_with_baseline_omission": 0,
+      "accepted_nonzero_with_baseline_voxel_difference": null,
+      "baseline_omission_fraction": null
+    },
+    "window_costs": [
+      {
+        "window_id": "W1",
+        "cost": {
+          "baseline": {
+            "keys": [
+              "27/19/29",
+              "27/19/30",
+              "27/20/29",
+              "27/20/30",
+              "28/19/29",
+              "28/19/30",
+              "28/20/29",
+              "28/20/30"
+            ],
+            "chunks": 8,
+            "logical_bytes": 16777216,
+            "stored_bytes": null
+          },
+          "candidate": {
+            "keys": [
+              "27/19/29",
+              "27/19/30",
+              "27/19/31",
+              "27/20/29",
+              "27/20/30",
+              "27/20/31",
+              "28/19/29",
+              "28/19/30",
+              "28/19/31",
+              "28/20/29",
+              "28/20/30",
+              "28/20/31"
+            ],
+            "chunks": 12,
+            "logical_bytes": 25165824,
+            "stored_bytes": null
+          },
+          "required": {
+            "keys": [
+              "27/19/29",
+              "27/19/30",
+              "27/20/29",
+              "27/20/30",
+              "28/19/29",
+              "28/19/30",
+              "28/20/29",
+              "28/20/30"
+            ],
+            "chunks": 8,
+            "logical_bytes": 16777216,
+            "stored_bytes": null
+          },
+          "added": {
+            "keys": [
+              "27/19/31",
+              "27/20/31",
+              "28/19/31",
+              "28/20/31"
+            ],
+            "chunks": 4,
+            "logical_bytes": 8388608,
+            "stored_bytes": null
+          },
+          "baseline_missed": {
+            "keys": [],
+            "chunks": 0,
+            "logical_bytes": 0,
+            "stored_bytes": null
+          },
+          "candidate_extra": {
+            "keys": [
+              "27/19/31",
+              "27/20/31",
+              "28/19/31",
+              "28/20/31"
+            ],
+            "chunks": 4,
+            "logical_bytes": 8388608,
+            "stored_bytes": null
+          },
+          "candidate_to_baseline_chunks": 1.5,
+          "candidate_to_required_chunks": 1.5,
+          "candidate_to_baseline_logical_bytes": 1.5,
+          "candidate_to_required_logical_bytes": 1.5,
+          "candidate_to_baseline_stored_bytes": null,
+          "candidate_to_required_stored_bytes": null
+        }
+      },
+      {
+        "window_id": "W2",
+        "cost": {
+          "baseline": {
+            "keys": [
+              "28/21/31",
+              "28/21/32",
+              "28/22/31",
+              "28/22/32"
+            ],
+            "chunks": 4,
+            "logical_bytes": 8388608,
+            "stored_bytes": null
+          },
+          "candidate": {
+            "keys": [
+              "28/21/31",
+              "28/21/32",
+              "28/21/33",
+              "28/22/31",
+              "28/22/32",
+              "28/22/33"
+            ],
+            "chunks": 6,
+            "logical_bytes": 12582912,
+            "stored_bytes": null
+          },
+          "required": {
+            "keys": [
+              "28/21/31",
+              "28/21/32",
+              "28/22/31",
+              "28/22/32"
+            ],
+            "chunks": 4,
+            "logical_bytes": 8388608,
+            "stored_bytes": null
+          },
+          "added": {
+            "keys": [
+              "28/21/33",
+              "28/22/33"
+            ],
+            "chunks": 2,
+            "logical_bytes": 4194304,
+            "stored_bytes": null
+          },
+          "baseline_missed": {
+            "keys": [],
+            "chunks": 0,
+            "logical_bytes": 0,
+            "stored_bytes": null
+          },
+          "candidate_extra": {
+            "keys": [
+              "28/21/33",
+              "28/22/33"
+            ],
+            "chunks": 2,
+            "logical_bytes": 4194304,
+            "stored_bytes": null
+          },
+          "candidate_to_baseline_chunks": 1.5,
+          "candidate_to_required_chunks": 1.5,
+          "candidate_to_baseline_logical_bytes": 1.5,
+          "candidate_to_required_logical_bytes": 1.5,
+          "candidate_to_baseline_stored_bytes": null,
+          "candidate_to_required_stored_bytes": null
+        }
+      },
+      {
+        "window_id": "W3",
+        "cost": {
+          "baseline": {
+            "keys": [
+              "34/23/32",
+              "34/23/33",
+              "34/24/32",
+              "34/24/33"
+            ],
+            "chunks": 4,
+            "logical_bytes": 8388608,
+            "stored_bytes": null
+          },
+          "candidate": {
+            "keys": [
+              "34/23/32",
+              "34/23/33",
+              "34/23/34",
+              "34/24/32",
+              "34/24/33",
+              "34/24/34"
+            ],
+            "chunks": 6,
+            "logical_bytes": 12582912,
+            "stored_bytes": null
+          },
+          "required": {
+            "keys": [
+              "34/23/32",
+              "34/23/33",
+              "34/24/32",
+              "34/24/33"
+            ],
+            "chunks": 4,
+            "logical_bytes": 8388608,
+            "stored_bytes": null
+          },
+          "added": {
+            "keys": [
+              "34/23/34",
+              "34/24/34"
+            ],
+            "chunks": 2,
+            "logical_bytes": 4194304,
+            "stored_bytes": null
+          },
+          "baseline_missed": {
+            "keys": [],
+            "chunks": 0,
+            "logical_bytes": 0,
+            "stored_bytes": null
+          },
+          "candidate_extra": {
+            "keys": [
+              "34/23/34",
+              "34/24/34"
+            ],
+            "chunks": 2,
+            "logical_bytes": 4194304,
+            "stored_bytes": null
+          },
+          "candidate_to_baseline_chunks": 1.5,
+          "candidate_to_required_chunks": 1.5,
+          "candidate_to_baseline_logical_bytes": 1.5,
+          "candidate_to_required_logical_bytes": 1.5,
+          "candidate_to_baseline_stored_bytes": null,
+          "candidate_to_required_stored_bytes": null
+        }
+      }
+    ],
+    "deduplicated_cost": {
+      "baseline": {
+        "keys": [
+          "27/19/29",
+          "27/19/30",
+          "27/20/29",
+          "27/20/30",
+          "28/19/29",
+          "28/19/30",
+          "28/20/29",
+          "28/20/30",
+          "28/21/31",
+          "28/21/32",
+          "28/22/31",
+          "28/22/32",
+          "34/23/32",
+          "34/23/33",
+          "34/24/32",
+          "34/24/33"
+        ],
+        "chunks": 16,
+        "logical_bytes": 33554432,
+        "stored_bytes": null
+      },
+      "candidate": {
+        "keys": [
+          "27/19/29",
+          "27/19/30",
+          "27/19/31",
+          "27/20/29",
+          "27/20/30",
+          "27/20/31",
+          "28/19/29",
+          "28/19/30",
+          "28/19/31",
+          "28/20/29",
+          "28/20/30",
+          "28/20/31",
+          "28/21/31",
+          "28/21/32",
+          "28/21/33",
+          "28/22/31",
+          "28/22/32",
+          "28/22/33",
+          "34/23/32",
+          "34/23/33",
+          "34/23/34",
+          "34/24/32",
+          "34/24/33",
+          "34/24/34"
+        ],
+        "chunks": 24,
+        "logical_bytes": 50331648,
+        "stored_bytes": null
+      },
+      "required": {
+        "keys": [
+          "27/19/29",
+          "27/19/30",
+          "27/20/29",
+          "27/20/30",
+          "28/19/29",
+          "28/19/30",
+          "28/20/29",
+          "28/20/30",
+          "28/21/31",
+          "28/21/32",
+          "28/22/31",
+          "28/22/32",
+          "34/23/32",
+          "34/23/33",
+          "34/24/32",
+          "34/24/33"
+        ],
+        "chunks": 16,
+        "logical_bytes": 33554432,
+        "stored_bytes": null
+      },
+      "added": {
+        "keys": [
+          "27/19/31",
+          "27/20/31",
+          "28/19/31",
+          "28/20/31",
+          "28/21/33",
+          "28/22/33",
+          "34/23/34",
+          "34/24/34"
+        ],
+        "chunks": 8,
+        "logical_bytes": 16777216,
+        "stored_bytes": null
+      },
+      "baseline_missed": {
+        "keys": [],
+        "chunks": 0,
+        "logical_bytes": 0,
+        "stored_bytes": null
+      },
+      "candidate_extra": {
+        "keys": [
+          "27/19/31",
+          "27/20/31",
+          "28/19/31",
+          "28/20/31",
+          "28/21/33",
+          "28/22/33",
+          "34/23/34",
+          "34/24/34"
+        ],
+        "chunks": 8,
+        "logical_bytes": 16777216,
+        "stored_bytes": null
+      },
+      "candidate_to_baseline_chunks": 1.5,
+      "candidate_to_required_chunks": 1.5,
+      "candidate_to_baseline_logical_bytes": 1.5,
+      "candidate_to_required_logical_bytes": 1.5,
+      "candidate_to_baseline_stored_bytes": null,
+      "candidate_to_required_stored_bytes": null
+    },
+    "ct_bodies": 0,
+    "cleanup_passed": true
+  },
+  "pherc0814": "Separate, earlier bounded preflight null. No CT bodies or voxel measurements."
+}

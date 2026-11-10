@@ -1,0 +1,26 @@
+{
+  "status": "M1_CI_DRAFT_NOT_RUN",
+  "source_revision": "3fbb3bbadb84fba3648a0c5c7cdbf7d767f9a3c0",
+  "hash_format": "Git blob SHA-1 of UTF-8 text canonicalized CRLF to LF",
+  "files": {
+    "vesuvius/src/vesuvius/ink_detection/data/dataset.py": "7ffcfba3c7064b407297cbf017d8588ed31b7501",
+    "vesuvius/src/vesuvius/ink_detection/data/geometry.py": "7b044dd8afff75677c094242b09e9d070be94072",
+    "vesuvius/src/vesuvius/ink_detection/data/augmentations.py": "daf38b6bf98dec89778ece3d0955aa1163b209b5",
+    "vesuvius/src/vesuvius/ink_detection/preprocessing/download_required_zarr_chunks.py": "61877c592e108f2652e113dfd9477324c92cc0b2",
+    "vesuvius/src/vesuvius/ink_detection/volume_io.py": "9bebe40d77f023b14100f53574a7ca08081b6d74",
+    "vesuvius/tests/ink_detection/test_data_foundation.py": "454ad112d8a5f6a402609ab28f27584837d8e425",
+    "vesuvius/src/vesuvius/ink_detection/config.py": "fc7b29e4b340e23a373c3e1d8fe4c046d57e4b6a",
+    "vesuvius/src/vesuvius/ink_detection/types.py": "3e43d9c105dd34c75a6aec3a67fc465a1cc369b0",
+    "vesuvius/tests/ink_detection/test_curation_preprocessing.py": "858cbfc657b56d7f30a3f7ccc9ec57e9dc3e9619",
+    "vesuvius/pyproject.toml": "e3ad563b32e89853664e4aa606e471ad61940ae7",
+    "vc_reader/src/vc_reader/tifxyz.py": "a365b63f5941a5e10a92b0ed3a7c04c2bb5deb79",
+    "vc_reader/src/cpp/tifxyz/bindings.hpp": "04c53056390afc0f3eeb381ab35b8d6059308f59",
+    "vc_reader/pyproject.toml": "e5ad8255887ec5bc0e60266fd469f9bcb7ae9681"
+  },
+  "dependencies_not_fully_pinned": [
+    "other transitive Python modules",
+    "compiled vc_reader._reader binary and linked libraries",
+    "NumPy/Torch/Numba/SciPy/Zarr/pytest installed environment"
+  ],
+  "gate": "No execution authorization. Checkout HEAD and these source bodies must match; not a complete dependency lock."
+}

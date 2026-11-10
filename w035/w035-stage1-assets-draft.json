@@ -1,0 +1,95 @@
+{
+  "status": "DRAFT_NO_AUTHORIZATION",
+  "release_metadata_sha256": "2b7b6cc676d93134ce73da839a34e74cc62a42ef475751d4d1bfc4327b53f8b7",
+  "origin": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/",
+  "asset_get": [
+    {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/mesh/20260317000000-on-20250728140407-9.362um.tifxyz/x.tif",
+      "bytes": 305102,
+      "etag": "\"996933018e840fe380d94b1e211abbd1\"",
+      "sha256": "d827a5d2e51035c91da74b5fba4fea55c9df9d8f58c6ec7f534d6012ee2f7b69"
+    },
+    {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/mesh/20260317000000-on-20250728140407-9.362um.tifxyz/y.tif",
+      "bytes": 305102,
+      "etag": "\"b2f6fb630d7e8f1b61b586eef6111a02\"",
+      "sha256": "41f1df324572b68450f4da92dcd4598844f602982f1965e5bea67e6de080d664"
+    },
+    {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/mesh/20260317000000-on-20250728140407-9.362um.tifxyz/z.tif",
+      "bytes": 305102,
+      "etag": "\"a391289c7b60b4c220e4ed3f55370c7e\"",
+      "sha256": "b61f8bbcd9cb538f43cd72678fd4d38a25cc1643daa4bcfdd7f2e9954f9a1e81"
+    },
+    {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/inklabels.zarr/0/c/0/0",
+      "bytes": 12888,
+      "etag": "\"e0754d8707c90eb3917669a2ee47285c\"",
+      "sha256": "b0db4f2af6f306a99eaa39661950a472c54006b9ea47e10f38f960aa21385f49"
+    },
+    {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/supervision.zarr/0/c/0/0",
+      "bytes": 10630,
+      "etag": "\"bf9bdeccdddb5a4fe4978df5d8edcb72\"",
+      "sha256": "8d21bb35550e5793a86519ccdcee1afc6b26c80dba3d2197536cec8996d53ed1"
+    },
+    {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/mesh/20260317000000-on-20250728140407-9.362um.tifxyz/meta.json",
+      "bytes": 415,
+      "etag": "\"d96c32251904b5ca9558e0e513e11f03\"",
+      "sha256": "11752e63185cc6bc8842cf6f4d7aef84a7e3ec7b0b4eb5c10bf99842e7cd8dda"
+    },
+    {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/inklabels.zarr/zarr.json",
+      "bytes": 2618,
+      "etag": "\"5c3a768a4283041e736faa4b7dd34a70\"",
+      "sha256": "b3908d86adc336d4f99b9d2b557b1e58d949cee37ab15abd91cf8d0400d52c94"
+    },
+    {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/inklabels.zarr/0/zarr.json",
+      "bytes": 1214,
+      "etag": "\"b8239a249a51aa0eca69fb8202f63b63\"",
+      "sha256": "8fd210540303a70023b4513aedef242df8d453644abd5c1812deddebc6761b0c"
+    },
+    {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/supervision.zarr/zarr.json",
+      "bytes": 2632,
+      "etag": "\"2ee40ddc104617fc811d9de950604c7d\"",
+      "sha256": "e9607db0c8c952f12f64d90f4a7a2b46a8ab677459d60f7ca0abbd01f4ef8d74"
+    },
+    {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/supervision.zarr/0/zarr.json",
+      "bytes": 1214,
+      "etag": "\"b8239a249a51aa0eca69fb8202f63b63\"",
+      "sha256": "8fd210540303a70023b4513aedef242df8d453644abd5c1812deddebc6761b0c"
+    },
+    {
+      "key": "PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/.zattrs",
+      "bytes": 3018,
+      "etag": "\"c792decadf526e26820c786d48dcddf0\"",
+      "sha256": "97e968dbbf11cc856dc57648aaaa9e6cade5e6575472dcfdeac7cfa50f546dd9"
+    },
+    {
+      "key": "PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0/.zarray",
+      "bytes": 239,
+      "etag": "\"d912d07cc4c271c302da6cc112c577e7\"",
+      "sha256": "562679cffc09a94b7342a38c37e49f433a4dfa6e3c93b7599dbeaec791186a35"
+    }
+  ],
+  "expected_response_body_bytes": 950174,
+  "maximum_response_body_bytes": 4194304,
+  "ct_chunk_bodies": 0,
+  "ct_head_requests": 0,
+  "max_attempts": 1,
+  "decoded_geometry_bytes": 914904,
+  "decoded_geometry_cap": 16777216,
+  "decoded_label_cap": 8388608,
+  "decoded_mask_cap": 8388608,
+  "ct_chunk_union_cap": 64,
+  "ct_logical_bytes_cap": 134217728,
+  "ct_staging_bytes_cap": 134217728,
+  "scratch_bytes_cap": 268435456,
+  "retained_output_bytes_cap": 8388608,
+  "max_paid_cost_usd": 0,
+  "weekly_remaining_stop_percent": 25
+}

@@ -1,0 +1,96 @@
+--- a/vesuvius/src/vesuvius/ink_detection/preprocessing/download_required_zarr_chunks.py
++++ b/vesuvius/src/vesuvius/ink_detection/preprocessing/download_required_zarr_chunks.py
+@@ -14,6 +14,7 @@
+ from vc_reader import tifxyz
+ 
+ from vesuvius.ink_detection.config import InkDataConfig
++from vesuvius.ink_detection.data.augmentations import NATIVE_CROP_TRANSLATION_MAX_VOXELS
+ from vesuvius.ink_detection.data.geometry import compute_native_crop_bbox
+ from vesuvius.ink_detection.data.patch_finding_default import (
+     labeled_patch_coverage,
+@@ -865,7 +866,7 @@
+             f"[{dataset_name}] debug patch[{idx}] "
+             f"segment={patch.get('segment_relpath', '?')} "
+             f"flat_bbox={patch.get('flat_bbox')} "
+-            f"native_bbox={world_bbox} "
++            f"download_bbox={world_bbox} "
+             f"clipped={clipped_bounds} "
+             f"chunks={len(chunk_ids)}"
+         )
+@@ -916,6 +917,14 @@
+         patch_finding_filter_empty_tile=bool(patch_finding_filter_empty_tile),
+         label_version=label_version,
+     )
++
++    # Level-0 patch geometry matches the trainer's requested grid. Nonzero
++    # requested levels need the separate native-coordinate alignment change.
++    if int(source_spec.volume_scale) == 0:
++        margin = NATIVE_CROP_TRANSLATION_MAX_VOXELS
++        for patch in patches:
++            z0, y0, x0, z1, y1, x1 = patch["world_bbox"]
++            patch["world_bbox"] = (z0, y0 - margin, x0 - margin, z1, y1 + margin, x1 + margin)
+ 
+     requested_scale_array = source_group[str(int(source_spec.volume_scale))]
+     chunk_shapes_by_scale = {
+--- /dev/null
++++ b/vesuvius/tests/ink_detection/test_sparse_download_translation.py
+@@ -0,0 +1,59 @@
++"""Synthetic regression for the sparse download plan's native translation margin."""
++import json
++from types import SimpleNamespace
++
++from vesuvius.ink_detection.preprocessing import download_required_zarr_chunks as downloader
++
++
++def test_sparse_plan_covers_original_and_translated_native_crop(tmp_path, monkeypatch, record_property):
++    # Frozen level-0 M1 crop. The accepted +40 Y translation reads [168, 296)
++    # instead of [128, 256), with unchanged X and Z intervals.
++    original_bbox = (0, 128, 128, 32, 256, 256)
++    original_chunks = {(0, 1, 1)}
++    translated_chunks = {(0, 1, 1), (0, 2, 1)}
++
++    # Supply candidate geometry and array metadata only. The real plan builder,
++    # requested-level chunk collection and pyramid projection run unchanged.
++    monkeypatch.setattr(
++        downloader, "_build_dataset_download_patches",
++        lambda **_: ([{"world_bbox": original_bbox, "is_validation": False}], 1),
++    )
++    group = {
++        str(level): SimpleNamespace(
++            shape=tuple(size >> level for size in (32, 384, 384)),
++            chunks=tuple(size >> level for size in (32, 128, 128)),
++        )
++        for level in range(3)
++    }
++
++    class MetadataGroup(dict):
++        def array_keys(self):
++            return self.keys()
++
++    monkeypatch.setattr(downloader, "open_volume_root", lambda *a, **kw: MetadataGroup(group))
++    (tmp_path / "synthetic").mkdir()
++    plan = downloader.build_dataset_chunk_plan(
++        datasets_root=tmp_path,
++        output_root=tmp_path,
++        source_spec=downloader.DatasetSourceSpec("synthetic", "unused://metadata-only"),
++        patch_size_zyx=(32, 128, 128),
++        overlap_fraction=0.25,
++        patch_filter="supervision",
++        patch_finding_type="default",
++        patch_min_labeled_coverage=0.0,
++        patch_finding_tile_size=None,
++        patch_finding_stride=None,
++        patch_finding_filter_empty_tile=False,
++        label_version=None,
++    )
++
++    record_property("planned_chunk_ids_by_scale", json.dumps(plan.chunk_ids_by_scale, sort_keys=True))
++    requested = set(plan.chunk_ids_by_scale[0])
++    assert original_chunks <= requested, "The unaugmented crop must remain covered"
++    assert translated_chunks <= requested, "The plan omits a chunk read by the accepted +40 Y crop"
++
++    # The conservative envelope is [88, 296) on Y and X. The synthetic
++    # aligned coarser grids have the same chunk indices, with smaller chunks.
++    envelope = tuple((0, y, x) for y in range(3) for x in range(3))
++    assert plan.chunk_ids_by_scale == {level: envelope for level in range(3)}
++    assert plan.patch_count == plan.candidate_bbox_count == 1

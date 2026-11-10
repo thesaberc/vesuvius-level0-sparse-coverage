@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "objects": {
+    "28/17/25": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "5e93ecde561f4b8882f9b7aea9a342972541cf2a1aee421e694ce53e6ab8cc9d",
+      "etag": "\"d07583703f3d291d6062bfe1f53bb6da\""
+    },
+    "28/17/26": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "9a573229b75be1d7ce5c8adc3c3a9314b6bc58f815c6f8a0bd643f6c1ce61113",
+      "etag": "\"8cd805c8cdb5d0aa3c38ce3b049b121d\""
+    },
+    "28/18/25": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "61fb5399e61b5bbb87b85aae08fc4e74269ebcdeaf98e3aab0569cc5924ee7f4",
+      "etag": "\"92796076bd6edf715211eeed785adfc3\""
+    },
+    "28/18/26": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "2f9733af6de3d46f01c16115f520693ebea11b0e3e1ef2adc785f756b6ee2fe5",
+      "etag": "\"598b3dc960fafebe862653bf7252887d\""
+    },
+    "28/19/25": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "c2847e95c3b217b8ba731c4f2884357758264ed0e4e529384f87261ea6a3979a",
+      "etag": "\"e91aed51a8cb627422ea51c47c431d14\""
+    },
+    "28/19/26": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "4ff8f2e320e7d04453eb0408b776bb7c2d7d7694eb07ddcdc028a27f6ced097f",
+      "etag": "\"3073620f67e53b3ce90798564a3d35b7\""
+    }
+  }
+}

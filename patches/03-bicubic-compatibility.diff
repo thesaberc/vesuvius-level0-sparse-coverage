@@ -1,0 +1,31 @@
+--- a/vesuvius/src/vesuvius/ink_detection/preprocessing/download_required_zarr_chunks.py
++++ b/vesuvius/src/vesuvius/ink_detection/preprocessing/download_required_zarr_chunks.py
+@@ -708,7 +708,7 @@
+     for y0, x0 in candidates:
+         patch_bbox_zyx = surface_patch_bbox(surface, y0, x0, patch_size)
+         flat_xyz, flat_valid = patch_tifxyz.resample_full(
+-            (int(y0), int(x0)), (patch_size[1], patch_size[2]), interpolation="smooth"
++            (int(y0), int(x0)), (patch_size[1], patch_size[2]), interpolation="bicubic"
+         )
+         patch_zyxs = flat_xyz[..., ::-1]
+         native_world_bbox = compute_native_crop_bbox(
+--- a/vesuvius/src/vesuvius/ink_detection/data/geometry.py
++++ b/vesuvius/src/vesuvius/ink_detection/data/geometry.py
+@@ -56,7 +56,7 @@
+ def _flat_positions(patch_tifxyz, y0: int, y1: int, x0: int, x1: int, stride: int):
+     """ZYX positions (-1 where missing) and validity of those full-resolution samples."""
+     origin, step, size = _flat_raster(patch_tifxyz, y0, y1, x0, x1, stride)
+-    xyz, valid = patch_tifxyz.resample(origin, step, size, interpolation="smooth")
++    xyz, valid = patch_tifxyz.resample(origin, step, size, interpolation="bicubic")
+     return np.where(valid[..., None], xyz[..., ::-1], -1.0).astype(np.float32), valid
+ 
+ 
+@@ -64,7 +64,7 @@
+     """ZYX unit normals (row direction x column direction, NaN off the surface) of flat-grid points y0:y1, x0:x1."""
+     stride = int(flat_grid_stride)
+     origin, step, size = _flat_raster(patch_tifxyz, int(y0) * stride, int(y1) * stride, int(x0) * stride, int(x1) * stride, stride)
+-    _, _, normals = patch_tifxyz.resample(origin, step, size, interpolation="smooth", normals=True)
++    _, _, normals = patch_tifxyz.resample(origin, step, size, interpolation="bicubic", normals=True)
+     return -normals[..., ::-1]
+ 
+ 

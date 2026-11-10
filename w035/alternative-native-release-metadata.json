@@ -1,0 +1,607 @@
+[
+  {
+    "segment": "PHerc0139/segments/20260317000000-w035_2026031718/",
+    "geometry": [
+      {
+        "bytes": 305102,
+        "etag": "\"996933018e840fe380d94b1e211abbd1\"",
+        "key": "PHerc0139/segments/20260317000000-w035_2026031718/mesh/20260317000000-on-20250728140407-9.362um.tifxyz/x.tif",
+        "width": 262,
+        "height": 291,
+        "compression": 1,
+        "decoded_bytes": 304968,
+        "ifd_offset": 304976
+      },
+      {
+        "bytes": 305102,
+        "etag": "\"b2f6fb630d7e8f1b61b586eef6111a02\"",
+        "key": "PHerc0139/segments/20260317000000-w035_2026031718/mesh/20260317000000-on-20250728140407-9.362um.tifxyz/y.tif",
+        "width": 262,
+        "height": 291,
+        "compression": 1,
+        "decoded_bytes": 304968,
+        "ifd_offset": 304976
+      },
+      {
+        "bytes": 305102,
+        "etag": "\"a391289c7b60b4c220e4ed3f55370c7e\"",
+        "key": "PHerc0139/segments/20260317000000-w035_2026031718/mesh/20260317000000-on-20250728140407-9.362um.tifxyz/z.tif",
+        "width": 262,
+        "height": 291,
+        "compression": 1,
+        "decoded_bytes": 304968,
+        "ifd_offset": 304976
+      }
+    ],
+    "geometry_meta": {
+      "key": "PHerc0139/segments/20260317000000-w035_2026031718/mesh/20260317000000-on-20250728140407-9.362um.tifxyz/meta.json",
+      "bytes": 415,
+      "etag": "\"d96c32251904b5ca9558e0e513e11f03\"",
+      "sha256": "11752e63185cc6bc8842cf6f4d7aef84a7e3ec7b0b4eb5c10bf99842e7cd8dda",
+      "json": {
+        "area_vx2": 25082013.29527031,
+        "bbox": [
+          [
+            1792.0513916015625,
+            2288.8984375,
+            2843.08154296875
+          ],
+          [
+            4419.91552734375,
+            4572.0517578125,
+            8061.2626953125
+          ]
+        ],
+        "format": "tifxyz",
+        "scale": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "type": "seg",
+        "uuid": "out"
+      }
+    },
+    "decoded_geometry_bytes": 914904,
+    "mask_release": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/",
+    "masks": {
+      "inklabels": {
+        "group": {
+          "key": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/inklabels.zarr/zarr.json",
+          "bytes": 2618,
+          "etag": "\"5c3a768a4283041e736faa4b7dd34a70\"",
+          "sha256": "b3908d86adc336d4f99b9d2b557b1e58d949cee37ab15abd91cf8d0400d52c94",
+          "json": {
+            "attributes": {
+              "ome": {
+                "version": "0.5",
+                "multiscales": [
+                  {
+                    "name": "w035_inklabels",
+                    "axes": [
+                      {
+                        "name": "y",
+                        "type": "space",
+                        "unit": "micrometer"
+                      },
+                      {
+                        "name": "x",
+                        "type": "space",
+                        "unit": "micrometer"
+                      }
+                    ],
+                    "datasets": [
+                      {
+                        "path": "0",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              9.362,
+                              9.362
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "1",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              18.724,
+                              18.724
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "2",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              37.448,
+                              37.448
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "3",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              74.896,
+                              74.896
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "4",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              149.792,
+                              149.792
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "5",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              299.584,
+                              299.584
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "source_array": "native-src/ink_9um/labels/native9-scrollprizeorg-21slices/w035/w035_inklabels.zarr",
+              "source_shape": [
+                28,
+                5820,
+                5240
+              ],
+              "source_plane": 14,
+              "canvas_size": [
+                5820,
+                5240
+              ],
+              "conversion": "re-encoded from the published 3-D label zarr; pixel values, canvas and geometry unchanged"
+            },
+            "zarr_format": 3,
+            "node_type": "group"
+          }
+        },
+        "array": {
+          "key": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/inklabels.zarr/0/zarr.json",
+          "bytes": 1214,
+          "etag": "\"b8239a249a51aa0eca69fb8202f63b63\"",
+          "sha256": "8fd210540303a70023b4513aedef242df8d453644abd5c1812deddebc6761b0c",
+          "json": {
+            "shape": [
+              5820,
+              5240
+            ],
+            "data_type": "uint8",
+            "chunk_grid": {
+              "name": "regular",
+              "configuration": {
+                "chunk_shape": [
+                  6144,
+                  5632
+                ]
+              }
+            },
+            "chunk_key_encoding": {
+              "name": "default",
+              "configuration": {
+                "separator": "/"
+              }
+            },
+            "fill_value": 0,
+            "codecs": [
+              {
+                "name": "sharding_indexed",
+                "configuration": {
+                  "chunk_shape": [
+                    512,
+                    512
+                  ],
+                  "codecs": [
+                    {
+                      "name": "bytes"
+                    },
+                    {
+                      "name": "blosc",
+                      "configuration": {
+                        "typesize": 1,
+                        "cname": "zstd",
+                        "clevel": 3,
+                        "shuffle": "bitshuffle",
+                        "blocksize": 0
+                      }
+                    }
+                  ],
+                  "index_codecs": [
+                    {
+                      "name": "bytes",
+                      "configuration": {
+                        "endian": "little"
+                      }
+                    },
+                    {
+                      "name": "crc32c"
+                    }
+                  ],
+                  "index_location": "end"
+                }
+              }
+            ],
+            "attributes": {},
+            "dimension_names": [
+              "y",
+              "x"
+            ],
+            "zarr_format": 3,
+            "node_type": "array",
+            "storage_transformers": []
+          }
+        },
+        "shards": {
+          "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/inklabels.zarr/0/c/0/0": {
+            "bytes": 12888,
+            "etag": "\"e0754d8707c90eb3917669a2ee47285c\""
+          }
+        }
+      },
+      "supervision": {
+        "group": {
+          "key": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/supervision.zarr/zarr.json",
+          "bytes": 2632,
+          "etag": "\"2ee40ddc104617fc811d9de950604c7d\"",
+          "sha256": "e9607db0c8c952f12f64d90f4a7a2b46a8ab677459d60f7ca0abbd01f4ef8d74",
+          "json": {
+            "attributes": {
+              "ome": {
+                "version": "0.5",
+                "multiscales": [
+                  {
+                    "name": "w035_supervision_mask",
+                    "axes": [
+                      {
+                        "name": "y",
+                        "type": "space",
+                        "unit": "micrometer"
+                      },
+                      {
+                        "name": "x",
+                        "type": "space",
+                        "unit": "micrometer"
+                      }
+                    ],
+                    "datasets": [
+                      {
+                        "path": "0",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              9.362,
+                              9.362
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "1",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              18.724,
+                              18.724
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "2",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              37.448,
+                              37.448
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "3",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              74.896,
+                              74.896
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "4",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              149.792,
+                              149.792
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "path": "5",
+                        "coordinateTransformations": [
+                          {
+                            "type": "scale",
+                            "scale": [
+                              299.584,
+                              299.584
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "source_array": "native-src/ink_9um/labels/native9-scrollprizeorg-21slices/w035/w035_supervision_mask.zarr",
+              "source_shape": [
+                28,
+                5820,
+                5240
+              ],
+              "source_plane": 14,
+              "canvas_size": [
+                5820,
+                5240
+              ],
+              "conversion": "re-encoded from the published 3-D label zarr; pixel values, canvas and geometry unchanged"
+            },
+            "zarr_format": 3,
+            "node_type": "group"
+          }
+        },
+        "array": {
+          "key": "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/supervision.zarr/0/zarr.json",
+          "bytes": 1214,
+          "etag": "\"b8239a249a51aa0eca69fb8202f63b63\"",
+          "sha256": "8fd210540303a70023b4513aedef242df8d453644abd5c1812deddebc6761b0c",
+          "json": {
+            "shape": [
+              5820,
+              5240
+            ],
+            "data_type": "uint8",
+            "chunk_grid": {
+              "name": "regular",
+              "configuration": {
+                "chunk_shape": [
+                  6144,
+                  5632
+                ]
+              }
+            },
+            "chunk_key_encoding": {
+              "name": "default",
+              "configuration": {
+                "separator": "/"
+              }
+            },
+            "fill_value": 0,
+            "codecs": [
+              {
+                "name": "sharding_indexed",
+                "configuration": {
+                  "chunk_shape": [
+                    512,
+                    512
+                  ],
+                  "codecs": [
+                    {
+                      "name": "bytes"
+                    },
+                    {
+                      "name": "blosc",
+                      "configuration": {
+                        "typesize": 1,
+                        "cname": "zstd",
+                        "clevel": 3,
+                        "shuffle": "bitshuffle",
+                        "blocksize": 0
+                      }
+                    }
+                  ],
+                  "index_codecs": [
+                    {
+                      "name": "bytes",
+                      "configuration": {
+                        "endian": "little"
+                      }
+                    },
+                    {
+                      "name": "crc32c"
+                    }
+                  ],
+                  "index_location": "end"
+                }
+              }
+            ],
+            "attributes": {},
+            "dimension_names": [
+              "y",
+              "x"
+            ],
+            "zarr_format": 3,
+            "node_type": "array",
+            "storage_transformers": []
+          }
+        },
+        "shards": {
+          "PHerc0139/segments/20260317000000-w035_2026031718/ink-labels/9.362um-volume-20250728140407/20260918/supervision.zarr/0/c/0/0": {
+            "bytes": 10630,
+            "etag": "\"bf9bdeccdddb5a4fe4978df5d8edcb72\""
+          }
+        }
+      }
+    },
+    "other_release_objects": {},
+    "volume": [
+      {
+        "key": "PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/.zattrs",
+        "bytes": 3018,
+        "etag": "\"c792decadf526e26820c786d48dcddf0\"",
+        "sha256": "97e968dbbf11cc856dc57648aaaa9e6cade5e6575472dcfdeac7cfa50f546dd9",
+        "json": {
+          "multiscales": [
+            {
+              "axes": [
+                {
+                  "name": "z",
+                  "type": "space"
+                },
+                {
+                  "name": "y",
+                  "type": "space"
+                },
+                {
+                  "name": "x",
+                  "type": "space"
+                }
+              ],
+              "datasets": [
+                {
+                  "coordinateTransformations": [
+                    {
+                      "scale": [
+                        1.0,
+                        1.0,
+                        1.0
+                      ],
+                      "type": "scale"
+                    }
+                  ],
+                  "path": "0"
+                },
+                {
+                  "coordinateTransformations": [
+                    {
+                      "scale": [
+                        2.0,
+                        2.0,
+                        2.0
+                      ],
+                      "type": "scale"
+                    }
+                  ],
+                  "path": "1"
+                },
+                {
+                  "coordinateTransformations": [
+                    {
+                      "scale": [
+                        4.0,
+                        4.0,
+                        4.0
+                      ],
+                      "type": "scale"
+                    }
+                  ],
+                  "path": "2"
+                },
+                {
+                  "coordinateTransformations": [
+                    {
+                      "scale": [
+                        8.0,
+                        8.0,
+                        8.0
+                      ],
+                      "type": "scale"
+                    }
+                  ],
+                  "path": "3"
+                },
+                {
+                  "coordinateTransformations": [
+                    {
+                      "scale": [
+                        16.0,
+                        16.0,
+                        16.0
+                      ],
+                      "type": "scale"
+                    }
+                  ],
+                  "path": "4"
+                },
+                {
+                  "coordinateTransformations": [
+                    {
+                      "scale": [
+                        32.0,
+                        32.0,
+                        32.0
+                      ],
+                      "type": "scale"
+                    }
+                  ],
+                  "path": "5"
+                }
+              ],
+              "name": "/",
+              "version": "0.4"
+            }
+          ]
+        }
+      },
+      {
+        "key": "PHerc0139/volumes/20250728140407-9.362um-1.2m-113keV-masked.zarr/0/.zarray",
+        "bytes": 239,
+        "etag": "\"d912d07cc4c271c302da6cc112c577e7\"",
+        "sha256": "562679cffc09a94b7342a38c37e49f433a4dfa6e3c93b7599dbeaec791186a35",
+        "json": {
+          "shape": [
+            20974,
+            6621,
+            6621
+          ],
+          "chunks": [
+            128,
+            128,
+            128
+          ],
+          "dtype": "|u1",
+          "fill_value": 0,
+          "order": "C",
+          "filters": null,
+          "dimension_separator": "/",
+          "compressor": null,
+          "zarr_format": 2
+        }
+      }
+    ]
+  }
+]

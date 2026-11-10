@@ -1,0 +1,25 @@
+{
+  "source_receipt_sha256": "76e4b6c25eb503f397759635af1d8af7680efa3a955a3269775c82248e66c92e",
+  "window": {
+    "flat_yx": [
+      756,
+      884,
+      656,
+      784
+    ],
+    "native_zyx": [
+      3600,
+      2343,
+      3262,
+      3632,
+      2471,
+      3390
+    ],
+    "offset_yx": [
+      -40,
+      0
+    ],
+    "supervised": 9903,
+    "retained": 3480
+  }
+}
