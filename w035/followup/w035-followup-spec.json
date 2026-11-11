@@ -1,0 +1,240 @@
+{
+  "schema": 1,
+  "segment": "PHerc0139/segments/20260317000000-w035_2026031718",
+  "source_volume": "20250728140407-9.362um-1.2m-113keV-masked.zarr",
+  "requested_level": 0,
+  "source_receipt_sha256": "76e4b6c25eb503f397759635af1d8af7680efa3a955a3269775c82248e66c92e",
+  "caps": {
+    "ct_keys": 64,
+    "ct_logical_bytes": 134217728,
+    "ct_staging_bytes": 134217728,
+    "ct_charged_read_bytes": 134217728,
+    "labels_tiles": 32,
+    "supervision_tiles": 32,
+    "geometry_decoded_bytes": 16777216,
+    "preflight_transfer_bytes": 4194304,
+    "scratch_bytes": 268435456,
+    "logs_and_receipts_bytes": 8388608
+  },
+  "paid_cost_usd": 0,
+  "stop_weekly_remaining_percent": 25,
+  "candidate_tiles": [
+    {
+      "tile_yx": [
+        1,
+        3
+      ],
+      "windows": [
+        [
+          736,
+          864,
+          1536,
+          1664
+        ],
+        [
+          756,
+          884,
+          1556,
+          1684
+        ],
+        [
+          776,
+          904,
+          1536,
+          1664
+        ],
+        [
+          776,
+          904,
+          1596,
+          1724
+        ],
+        [
+          796,
+          924,
+          1556,
+          1684
+        ],
+        [
+          796,
+          924,
+          1616,
+          1744
+        ],
+        [
+          816,
+          944,
+          1556,
+          1684
+        ],
+        [
+          816,
+          944,
+          1616,
+          1744
+        ],
+        [
+          836,
+          964,
+          1556,
+          1684
+        ],
+        [
+          836,
+          964,
+          1616,
+          1744
+        ],
+        [
+          856,
+          984,
+          1556,
+          1684
+        ],
+        [
+          856,
+          984,
+          1616,
+          1744
+        ],
+        [
+          876,
+          1004,
+          1556,
+          1684
+        ],
+        [
+          876,
+          1004,
+          1616,
+          1744
+        ],
+        [
+          896,
+          1024,
+          1556,
+          1684
+        ],
+        [
+          896,
+          1024,
+          1636,
+          1764
+        ]
+      ]
+    },
+    {
+      "tile_yx": [
+        3,
+        3
+      ],
+      "windows": [
+        [
+          1536,
+          1664,
+          1676,
+          1804
+        ],
+        [
+          1536,
+          1664,
+          1856,
+          1984
+        ],
+        [
+          1556,
+          1684,
+          1796,
+          1924
+        ],
+        [
+          1576,
+          1704,
+          1736,
+          1864
+        ],
+        [
+          1596,
+          1724,
+          1676,
+          1804
+        ],
+        [
+          1596,
+          1724,
+          1876,
+          2004
+        ],
+        [
+          1616,
+          1744,
+          1836,
+          1964
+        ],
+        [
+          1636,
+          1764,
+          1816,
+          1944
+        ],
+        [
+          1736,
+          1864,
+          1576,
+          1704
+        ],
+        [
+          1776,
+          1904,
+          1576,
+          1704
+        ],
+        [
+          1796,
+          1924,
+          1636,
+          1764
+        ],
+        [
+          1816,
+          1944,
+          1676,
+          1804
+        ],
+        [
+          1856,
+          1984,
+          1556,
+          1684
+        ],
+        [
+          1876,
+          2004,
+          1596,
+          1724
+        ],
+        [
+          1896,
+          2024,
+          1636,
+          1764
+        ],
+        [
+          1916,
+          2044,
+          1676,
+          1804
+        ]
+      ]
+    }
+  ],
+  "offset_order": "all 3968 legal nonzero offsets sorted by max(abs(Y),abs(X)), then sum(abs(Y),abs(X)), then signed Y and X",
+  "selection": "First eligible window and retained offset with adding keys disjoint from previous witnesses, one per tile. Freeze both before planners. No substitutes after freeze.",
+  "excluded_omissions": [
+    "28/17/25",
+    "28/17/26"
+  ],
+  "max_screened_windows": 32,
+  "max_sampler_probes": 4,
+  "attempts_per_stage": 1
+}

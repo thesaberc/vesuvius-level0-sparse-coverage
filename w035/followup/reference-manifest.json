@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "objects": {
+    "27/20/31": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "b32e585ee278e68fc9f6ec6c75d626304d13a6e29292cfb1f4bd67c287c5bef9",
+      "etag": "\"288546cd2db347f11f104b0a7d3a0cde\""
+    },
+    "27/20/32": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "9c0da98f2d7c8b07e16cc94e921f88f3ead22bae3640ed3898d361ce4de98258",
+      "etag": "\"56618b8c66815bc79b59eb9e99726cb6\""
+    },
+    "27/21/31": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "f4d4aadda9e0f9d470e53bddb875b78645939df03d48cb9c0aef4ab161be9bb0",
+      "etag": "\"6a7e99e33c70f77a5406eb3114264723\""
+    },
+    "27/21/32": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "52db19fce85db9c19d104b9e1592f438a04537dd806cbf1fd54a264caa6a77a7",
+      "etag": "\"84496a0c3f4a0cd9615db2232e295ac8\""
+    },
+    "27/22/31": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "594b4975b1237efbaca86e58c568a414ea84c21a606ba10906582af87ec8122d",
+      "etag": "\"8f0d8ba3cc387f5fabb76f41a8c45b0e\""
+    },
+    "27/22/32": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "05a98013bc2b9008836fe1eb7889621243acdf2f446c2d1eb40dd0c6f1ac84f4",
+      "etag": "\"5d064340265765038d814834f9551722\""
+    },
+    "34/23/32": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "f0ce0ba24eb81fba0c63c3cca679c6874c5735a125160e90243afc7a88bc9423",
+      "etag": "\"d6e7ce6d67140304254e0881bd3c7b05\""
+    },
+    "34/23/33": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "dea6096a3aad197abe79ddd8495b9b233446959e879e53b7f51540e9920653df",
+      "etag": "\"9576dc069817f227cae6fdff30283410\""
+    },
+    "34/23/34": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "6f8b6607e480313470ceb5a7096fc516ebe973cf909dbc42cbcec77e7a848053",
+      "etag": "\"576826ae336354ef505d2e34b4dbdb3b\""
+    },
+    "34/24/32": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "726daa109835383e47388a581aefb85588e068fb8d576233e9c006336f42fde6",
+      "etag": "\"319b76acb7b90082c86636df6b533ff5\""
+    },
+    "34/24/33": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "e7a44fcffeaf35388e580d9de7e0c44ca8eed479bbf8cd2de903b75206d39f26",
+      "etag": "\"def20e55b0c2687d34e41dfeec3689a3\""
+    },
+    "34/24/34": {
+      "disposition": "PRESENT",
+      "bytes": 2097152,
+      "sha256": "f297e9c25610f1c01de278840a9cd1e2c0d8fe96916fdd27f39560ab32068b46",
+      "etag": "\"57238364efa489894a02b4347c280641\""
+    }
+  }
+}

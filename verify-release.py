@@ -13,6 +13,19 @@ ALLOW = {
     "fixtures/conftest.py", "fixtures/independent_oracle.py", "fixtures/source-pins.json",
     "fixtures/test_serialized_planner_loader.py", "fixtures/test_sparse_training_witness.py",
     "evidence/results.json",
+    "evidence/followup.json",
+    "w035/followup/preflight-witness.json",
+    "w035/followup/reference-manifest.json",
+    "w035/followup/test_w035_cohort.py",
+    "w035/followup/test_w035_manifest.py",
+    "w035/followup/w035-followup-spec.json",
+    "w035/followup/w035-stage1-assets-draft.json",
+    "w035/followup/w035_bounded_assets.py",
+    "w035/followup/w035_cohort_metrics.py",
+    "w035/followup/w035_cohort_replay.py",
+    "w035/followup/w035_ct_compare.py",
+    "w035/followup/w035_followup_freeze.py",
+    "w035/followup/w035_selector.py",
     "w035/alternative-native-release-metadata.json", "w035/preflight-witness.json",
     "w035/reference-manifest.json", "w035/test_w035_manifest.py", "w035/w035-frozen-witness.json",
     "w035/w035-stage1-assets-draft.json", "w035/w035_bounded_assets.py", "w035/w035_ct_compare.py",
@@ -63,6 +76,17 @@ def verify():
     assert cohort["counts"]["baseline_omission_fraction"] is None
     assert cohort["counts"]["fallbacks"] == 6 and cohort["ct_bodies"] == 0
     assert cohort["deduplicated_cost"]["added"]["logical_bytes"] == 16*1024**2
+    follow = json.loads((ROOT/"evidence/followup.json").read_bytes())
+    windows = follow["summary"]["windows"]
+    assert len(windows) == 2
+    for window, count in zip(windows, (4095, 4088), strict=True):
+        control, shifted = window["cases"]
+        assert control["comparison"]["baseline"]["mismatches"] == 0
+        assert shifted["comparison"]["baseline"]["mismatches"] == count
+        for case in (control, shifted):
+            assert case["comparison"]["candidate"]["mismatches"] == 0
+            assert all(case["comparison"]["tensor_equal"]["candidate"].values())
+    assert follow["summary"]["deduplicated_cost"]["added"]["stored_bytes"] == 8*1024**2
     print("PASS: exact public allowlist, checksums, links, syntax, redaction and evidence totals")
 
 

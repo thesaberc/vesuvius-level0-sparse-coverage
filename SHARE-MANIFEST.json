@@ -1,5 +1,5 @@
 {
-  "status": "shareable-candidate-awaiting-owner-publication-approval",
+  "status": "approved-public-release",
   "excludes": [
     "raw CT and label/mask payloads",
     "unpublished text and images",
@@ -15,14 +15,14 @@
     },
     {
       "path": "README.md",
-      "bytes": 3763,
-      "sha256": "5aae189162ba426598f6ea4605199368913412c8f64095d5b8500e2667bdddd1",
+      "bytes": 5245,
+      "sha256": "3951f73bca58d9f8944ff43ab0cea5494020b3787ad7fec63f3f28ae9a8669b0",
       "scope": "release documentation or license"
     },
     {
       "path": "REPRODUCE.md",
-      "bytes": 3200,
-      "sha256": "8bd3dc83da45badaac976f7874975a1fdf45dce84f0ffa149987d632edde49af",
+      "bytes": 4696,
+      "sha256": "5d19cf0e3856801eae1fdb9be48258ff63b64d9765f52f53af53cad9cfe256ca",
       "scope": "release documentation or license"
     },
     {
@@ -87,14 +87,14 @@
     },
     {
       "path": "reproduce.py",
-      "bytes": 9764,
-      "sha256": "bd06f079654790026a3bec557fafab8f7640dc10ab923fd16635a428e8c6142a",
+      "bytes": 10296,
+      "sha256": "b89c3da73d0393b2d1026e86887cff0ed4f3304b8846341da1941926151e5dfb",
       "scope": "code or synthetic regression"
     },
     {
       "path": "verify-release.py",
-      "bytes": 3431,
-      "sha256": "386e6bb23a051be982e4d5575d2bc9c238a6dc6fd72ba11351332bdfecd55371",
+      "bytes": 4748,
+      "sha256": "470fe3a5f26f6624cad02a4e285e58719e17660050c8778cff776bce96a304c3",
       "scope": "code or synthetic regression"
     },
     {
@@ -150,6 +150,84 @@
       "bytes": 4955,
       "sha256": "61a3eab30a90de7ea2c30cfb320f571af4124df269573dc9f99eb2399664bad4",
       "scope": "code or synthetic regression"
+    },
+    {
+      "path": "evidence/followup.json",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 24758,
+      "sha256": "9002051b8661aff820915f196716b9e81e961f4e7a5a330cf3ff58947ad99790"
+    },
+    {
+      "path": "w035/followup/preflight-witness.json",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 3813,
+      "sha256": "9149ad5a55c150f0bd35778eff874f74c660221b78584f9249151ba375505820"
+    },
+    {
+      "path": "w035/followup/reference-manifest.json",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 2735,
+      "sha256": "24d6cbde5a42e0d97b389cc4432515c3bd81f2d7cc58f0b77562b0acf177a476"
+    },
+    {
+      "path": "w035/followup/test_w035_cohort.py",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 9557,
+      "sha256": "a053dc627ae8645edd784ce7ba2f55834ee58d5a9fca2a60c42c3e04556d5095"
+    },
+    {
+      "path": "w035/followup/test_w035_manifest.py",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 15959,
+      "sha256": "ea0349206911f2fccaf2880debfda0c7171af0e3859b73b112b4993d63ca15cb"
+    },
+    {
+      "path": "w035/followup/w035-followup-spec.json",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 4003,
+      "sha256": "97cdb8831c03cc95889798f4d96f0e05ba900194011de94b013725e607d72520"
+    },
+    {
+      "path": "w035/followup/w035-stage1-assets-draft.json",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 4363,
+      "sha256": "37677b7f82e3708cfee3567f9ae9cac12d4e5beb8e8a5a65463d4bc42c5034ec"
+    },
+    {
+      "path": "w035/followup/w035_bounded_assets.py",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 6175,
+      "sha256": "8e42ba6e9649a3b707416dc36c40c3e61f0dce6fc369dae020fe9ae849e7b6c5"
+    },
+    {
+      "path": "w035/followup/w035_cohort_metrics.py",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 5622,
+      "sha256": "3bedd18a99bc35297981920acfa3b652e1e90f98aaa259ecea0e92dfdd77717b"
+    },
+    {
+      "path": "w035/followup/w035_cohort_replay.py",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 5939,
+      "sha256": "0ef3ad58c34b8589eef5dc80f95bbcecc44014f53a6060a79fca44be533410dc"
+    },
+    {
+      "path": "w035/followup/w035_ct_compare.py",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 6044,
+      "sha256": "713f26f9640bfbe744efc6fc12a0fd337234f0c4100647b012d9bc88bc02db91"
+    },
+    {
+      "path": "w035/followup/w035_followup_freeze.py",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 2249,
+      "sha256": "8c8d9a40ae19fa3cdf6e2624f06cbccbf70e2e20dacea3d49634e7bbf8fda77a"
+    },
+    {
+      "path": "w035/followup/w035_selector.py",
+      "scope": "sanitized validation evidence or offline reproduction input",
+      "bytes": 5042,
+      "sha256": "f4fa2c97227c4c3cdc72bcb9112c1233179a9fa76a3897ecc6af9555e2ed0dfe"
     }
   ]
 }

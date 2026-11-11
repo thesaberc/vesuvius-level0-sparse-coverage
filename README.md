@@ -26,3 +26,20 @@ The real-scroll result establishes a correctness benefit for one targeted crop. 
 The historical run used Villa revision `3fbb3bbadb84fba3648a0c5c7cdbf7d767f9a3c0`. The three review patches also passed a file-level static application check on the planner and geometry preimages from Villa `c86cbd14bb34e0124684d3d97b03b310c947819a`. No scientific replay ran on that newer revision. [Villa](https://github.com/ScrollPrize/villa/tree/3fbb3bbadb84fba3648a0c5c7cdbf7d767f9a3c0) · [Static-check revision](https://github.com/ScrollPrize/villa/commit/c86cbd14bb34e0124684d3d97b03b310c947819a)
 
 Data attribution: Giorgio Angelotti et al., *Vesuvius Challenge — CT Scans of Herculaneum Papyri*. PHerc. 139 w035 uses official volume `20250728140407`. The input release is CC BY-NC 4.0. This artifact contains code, aggregate evidence and object identities. It contains no raw CT, labels, masks, images or hidden text. The [Villa license](LICENSE) is retained. [PHerc. 139 release](https://scrollprize.org/data_browser/PHerc0139) · [Dataset citation and licensing](https://scrollprize.org/data#licenses)
+
+## Expanded real-scroll validation
+
+All three retained crops are from PHerc. 139 w035. Chunk keys below use Z/Y/X at level 0.
+
+| Retained shift | Omitted baseline keys | Baseline image voxels changed | Patched image voxels changed |
+| --- | --- | ---: | ---: |
+| −40 Y | `28/17/25`, `28/17/26` | 4,096 | 0 |
+| −13 Y | `27/20/31`, `27/20/32` | 4,095 | 0 |
+| +29 X | `34/23/34`, `34/24/34` | 4,088 | 0 |
+
+All same-window zero controls matched exactly. Labels and supervision matched in both arms. Each plan grew from 4 to 6 chunks (8 to 12 MiB raw CT), and the distinct keys across all three windows grew from 12 to 18 (24 to 36 MiB). The patched plan exactly covered the union of the observed zero and shifted reads in each window. These targeted cases establish a correctness effect on one segment. Frequency, typical overhead, training gains and reading accuracy remain unmeasured.
+
+In a separate three-window cohort, all six nonzero proposals fell back to zero and the baseline covered every observed read. The envelope added eight distinct chunks beyond those reads (16 to 24 chunks, 32 to 48 MiB logical). This shows possible unnecessary download and storage overhead. The cohort staged zero CT bodies and measured neither stored bytes nor voxel differences.
+
+[Original proof and negative cohort](evidence/results.json) · [Follow-up proofs and sanitized receipt checks](evidence/followup.json) · [Reproduction](REPRODUCE.md)
+

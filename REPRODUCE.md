@@ -28,3 +28,17 @@ mkdir -p scratch-w035
 ```
 
 The comparison should report a −40 Y realized shift, omissions at `0/28/17/25` and `0/28/17/26`, 4,096 baseline mismatches and zero patched mismatches. Both arms should match the zero control. The cohort used zero CT placeholders only. Its [aggregate receipt](evidence/results.json) records plan and read counts. It cannot be used to verify voxel equality.
+
+## Two follow-up comparisons
+
+Use the same qualified offline environment. Stage the official auxiliary inputs identified by [length and SHA-256](w035/followup/w035-stage1-assets-draft.json) and the 12 raw level-0 chunks pinned by [key, length and SHA-256](w035/followup/reference-manifest.json) in separate read-only roots. The pinned release volume is PHerc. 139 native `20250728140407-9.362um-1.2m-113keV-masked.zarr`. Cite Vesuvius Challenge – CT Scans of Herculaneum Papyri using the official attribution and observe any asset-specific terms. [Dataset citation and terms](https://scrollprize.org/data#licenses)
+
+```bash
+mkdir scratch-w035-followup
+"$runtime" -I -B reproduce.py w035-followup --checkout "$checkout" --python "$runtime" \
+  --scratch "$PWD/scratch-w035-followup" --auxiliary-root /path/to/pinned-aux \
+  --ct-root /path/to/pinned-level0-chunks
+```
+
+The test uses the original fixed [window and offset selection inputs](w035/followup/w035-followup-spec.json) and requires agreement with the [preflight](w035/followup/preflight-witness.json) on the frozen schedule, actual read boxes and plan keys. Compare each arm with the complete reference using the same bicubic compatibility patch. Expect 4,095 baseline mismatches for −13 Y and 4,088 for +29 X, with exact patched images and exact labels and supervision in both arms. Both zero controls must match exactly. [Recorded comparison and receipt hashes](evidence/followup.json)
+

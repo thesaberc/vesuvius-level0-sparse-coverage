@@ -15,6 +15,7 @@ CASES = {
     "m1": "test_sparse_training_witness.py::test_cached_fixture_accepted_crop_has_missing_chunk_and_is_restored",
     "focused": REGRESSION + "::test_sparse_plan_covers_original_and_translated_native_crop",
     "serialized": "test_serialized_planner_loader.py::test_serialized_plan_matches_dense_for_translated_crop",
+    "w035-followup": "test_w035_cohort.py::test_w035_cohort",
     "w035": "test_w035_manifest.py::test_w035_manifest",
 }
 EXCLUDED_ASSETS = {
@@ -84,7 +85,7 @@ def stage(args, tree, fixtures):
                       if args.minimal else ("00-executed-m2.diff",)):
             git(tree, "apply", "--check", str(PACKET/"patches"/patch))
             git(tree, "apply", str(PACKET/"patches"/patch))
-    if args.case in ("serialized", "w035"):
+    if args.case in ("serialized", "w035", "w035-followup"):
         patch = str(PACKET/"patches/03-bicubic-compatibility.diff")
         git(tree, "apply", "--check", patch)
         git(tree, "apply", patch)
@@ -118,9 +119,9 @@ def main():
         parser.error("--scratch must be outside the Villa checkout")
     if not args.stage_only and (args.python is None or not args.python.is_file()):
         parser.error("--python must select an installed, compatible environment")
-    if args.case == "w035" and not args.stage_only and not (args.auxiliary_root and args.ct_root):
+    if args.case in ("w035", "w035-followup") and not args.stage_only and not (args.auxiliary_root and args.ct_root):
         parser.error("w035 requires the verified auxiliary and CT local stores")
-    if args.case != "w035" and (args.auxiliary_root or args.ct_root):
+    if args.case not in ("w035", "w035-followup") and (args.auxiliary_root or args.ct_root):
         parser.error("Scientific input roots are only accepted by the w035 replay")
     for line in (PACKET/"SHA256SUMS").read_text(encoding="utf-8").splitlines():
         digest, name = line.split("  ", 1)
@@ -133,9 +134,13 @@ def main():
                VESUVIUS_M2_CANDIDATE_PLANNER=str(tree/PLANNER),
                PYTEST_DISABLE_PLUGIN_AUTOLOAD="1",OMP_NUM_THREADS="1",MKL_NUM_THREADS="1",
                OPENBLAS_NUM_THREADS="1",NUMBA_NUM_THREADS="1",CUDA_VISIBLE_DEVICES="")
-    if args.case == "w035":
+    if args.case in ("w035", "w035-followup"):
         w035 = PACKET/"w035"
-        for name in ("test_w035_manifest.py","w035_selector.py","w035_bounded_assets.py","w035_ct_compare.py"):
+        names = ("test_w035_manifest.py","w035_selector.py","w035_bounded_assets.py","w035_ct_compare.py")
+        if args.case == "w035-followup":
+            w035 /= "followup"
+            names += ("test_w035_cohort.py","w035_cohort_metrics.py","w035_cohort_replay.py","w035_followup_freeze.py")
+        for name in names:
             (fixtures/name).write_bytes((w035/name).read_bytes())
         original = (args.checkout/PLANNER).read_bytes().replace(b"\r\n", b"\n")
         assert original.count(b'interpolation="smooth"') == 1
